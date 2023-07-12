@@ -43,3 +43,27 @@
   }
   h1{text-align: center;}
 div{border:2px solid black}
+
+.one{text-align: center;text-size-adjust: 20px;}
+
+.episode,.episode2,.episode3{text-decoration:underline;}
+
+img.pic{border:2px solid red}
+
+img.pic2{border:2px solid yellowgreen}
+
+img.pic3{border:2px solid plum}
+
+
+p.two,p.three{text-align: center;}
+
+#anime{background-image:url(https://i.gifer.com/77MS.gif);background-position: right ;}
+#anime2{background-image: url(https://media.tenor.com/waEwJu0lIpQAAAAM/rick-and-morty-dancing.gif);}
+#anime3{background-image: url(https://media.tenor.com/ijxFYrJg828AAAAM/rick-and-morty-morty-dancing.gif);}
+p.id,p.gender,p.species,p.episode{color: #d6dc2c;}
+p.id2,p.gender2,p.species2,p.episode2{color: #2610cf43;background-color: white;}
+
+p.id3,p.gender3,p.species3,p.episode3 {background-color: rgb(82, 249, 5);}
+.link{background-color: white;}
+#highlight{background-color: rgb(111, 35, 118);}
+/* #highlight2{background-color: white;} */

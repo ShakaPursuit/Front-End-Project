@@ -66,10 +66,53 @@
 
         const choosePic3= document.querySelector('.pic3')
 
+        const assignName=document.querySelector('.one')
+        const assignName2=document.querySelector('.two')
+        const assignName3=document.querySelector('.three')
+
+        const assignId=document.querySelector('.id')
+        const assignGender=document.querySelector('.gender')
+        const assignEpisode=document.querySelector('.episode')
+        const assignSpecies=document.querySelector('.species')
+
+        const assignId2=document.querySelector('.id2')
+        const assignGender2=document.querySelector('.gender2')
+        const assignEpisode2=document.querySelector('.episode2')
+        const assignSpecies2=document.querySelector('.species2')
+
+        const assignId3=document.querySelector('.id3')
+        const assignGender3=document.querySelector('.gender3')
+        const assignEpisode3=document.querySelector('.episode3')
+        const assignSpecies3=document.querySelector('.species3')
+
+
 
         choosePic.src =results[2].image
         choosePic2.src =results[19].image
         choosePic3.src =results[11].image
+
+        assignName.textContent=results[2].name
+        assignName2.textContent=results[19].name
+        assignName3.textContent=results[11].name
+//person 1
+        assignId.textContent="ID: "+results[2].id
+        assignGender.textContent="GENDER: "+results[2].gender
+        assignEpisode.textContent=results[2].episode
+        assignSpecies.textContent="SPECIES: "+results[2].species
+
+//person 2
+        assignId2.textContent="ID: "+results[19].id
+        assignGender2.textContent="GENDER: "+results[19].gender
+        assignEpisode2.textContent=results[19].episode
+        assignSpecies2.textContent="SPECIES: "+results[19].species
+
+ //person 3       
+        assignId3.textContent="ID: "+results[11].id
+        assignGender3.textContent="GENDER: "+results[11].gender
+        assignEpisode3.textContent=results[11].episode
+        assignSpecies3.textContent="SPECIES: "+results[11].species
+
+
 
 
         console.log(results[1])
