@@ -2,4 +2,23 @@ body:hover{background-image: url("./Shaka\ Livingstone.jpeg");}
 
 body{background-color: rgb(1, 90, 255);}
 
+@media (max-width: 400px) {
 
+    div.headerDiv, body,main,header {
+       display: inline;
+       min-width: 402px;
+ 
+      max-width: 402px;
+     }
+ 
+     h1{display:flexbox;max-width: 402px;}
+     @media only screen 
+     and (min-device-width: 768px) 
+     and (max-device-width: 1024px) 
+     and (-webkit-min-device-pixel-ratio: 1) {
+   
+   }
+   
+
+
+}
