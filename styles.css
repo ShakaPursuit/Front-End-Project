@@ -1,6 +1,7 @@
 *{margin: 0;
 justify-content: stretch;}
-body{display: grid;
+ body{ 
+    display:grid;
     width: 100%;
     height: 750px; 
     grid-template-areas:
@@ -110,5 +111,10 @@ body{min-height: 100vh;}
 
 div.headerDiv{width:1000px;height: 100px;grid-row-end:4px}
 
+.me{color:#d6dc2c;font-family: Georgia, 'Times New Roman', Times, serif;}
 
 
+.flexbox{flex-wrap: wrap-reverse;}
+
+
+div.container2{height:400px}
