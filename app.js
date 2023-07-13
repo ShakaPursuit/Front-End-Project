@@ -89,7 +89,7 @@
     
     })
        
-//Character 1
+//Figuring out How to Access the Data
         // function chooseCharacter({results}){
 
         //     const [myCharacter]=results;
