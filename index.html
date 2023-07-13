@@ -70,63 +70,79 @@
     
     </nav>
     <main >
-        <div class="container2">
-            <h1>Create Your Own Character</h1>
-            <form id="characters-form">
-                <label for="name">Name:</label>
-                <select id="name" name="name">
 
-                    <option value="">Choose a name</option>
-                </select>
-                <label for="species">Species:</label>
-                <input type ="text" id="species" name="species">
-
-                <label for="gender">Gender:</label>
-                <input type="text" id="gender" name="gender">
-
-                <label for="status">Status:</label>
-                <input type="text" id="status" name="status">
-
-                <label for="image">Image:</label>
-                <input  id="image-preview" src="" alt="Image preview">
-
-                <button type ="submit">Add Character</button>
-                
-
-
-
-
-
-
-
-
-
-
+        <div class="container">
+            <h1>Add a Rick and Morty Character</h1>
+        
+            <form id="character-form">
+              <label for="name">Name:</label>
+              <select id="name" name="name">
+                <option value="">Select a name</option>
+              </select>
+        
+              <button type="submit">Add Character</button>
             </form>
-            <figure>
-
-
-
-
-
-                
-            </figure>
-
-
-
-
-
-
-
-            
-
-
-
-
-
-
-        </div>
-    </div>
+        
+            <div id="character-data"></div>
+          </div>
+        
+          <script>
+            const nameInput = document.getElementById("name");
+            const characterData = document.getElementById("character-data");
+        
+            //fetching from my api
+            fetch("https://rickandmortyapi.com/api/character")
+              .then(response => response.json())
+              .then(data => {//looping through data to find character from api
+                const characterNames = data.results.map(character => character.name);
+                characterNames.forEach(name => {
+                  const option = document.createElement("option");
+                  option.value = name;
+                  option.textContent = name;
+                  nameInput.appendChild(option);//setting input option to the name selected
+                });
+              })
+              .catch(error => alert(`Error retrieving character names: ${error}`));
+        
+            const characterForm = document.getElementById("character-form");
+            characterForm.addEventListener("submit", event => {
+              event.preventDefault();
+        
+              const selectedName = nameInput.value;//setting selected name to variable and setting equal to nameInput
+              if (!selectedName) {
+                alert("Please select a character name.");//if no name is entered , select a name
+                return;
+              }
+        
+              const characterUrl = `https://rickandmortyapi.com/api/character/?name=${selectedName}`;
+        
+              fetch(characterUrl)//fetching from api , so selectedName can create my new Object
+                .then(response => response.json())
+                .then(data => {
+                  if (data.results.length > 0) {
+                    const character = data.results[0];
+        
+                    // iterating through the data results, creating my character through string interpolation
+                    //and setting the html tags equal to my result data specific
+                    const characterHtml = `
+                      <h2>${character.name}</h2>
+                      <img src="${character.image}" alt="${character.name} image">
+                      <p><strong>Species:</strong> ${character.species}</p>
+                      <p><strong>Gender:</strong> ${character.gender}</p>
+                      <p><strong>Status:</strong> ${character.status}</p>
+                      <p><strong>Location:</strong> ${character.location.name}</p>
+                    `;
+        
+                    characterData.innerHTML = characterHtml;
+                  } else {
+                    alert("No character found with that name.");
+                  }
+                })
+                .catch(error => alert(`Error: ${error}`));
+            });
+          </script>
+        
+    
 
 
 

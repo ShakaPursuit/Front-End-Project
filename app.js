@@ -1,58 +1,11 @@
 
 
-        // fetch('https://rickandmortyapi.com/api/location')
-        // .then(response => response.json())
-        // .then(json => console.log(json))
-
-
-
-
-        // fetch('https://rickandmortyapi.com/api/episode')
-        // .then(response => response.json())
-        // .then(json => console.log(json))
+       
 
        
 
-//Character 1
-        function chooseCharacter({results}){
 
-            const [myCharacter]=results;
-
-        //   myDiv.innerHTML=myCharacter
-        console.log("here are my result :", myCharacter)
-
-        console.log("here are my resultImage :", myCharacter.image)
-
-        console.log("here are my episode Link :", myCharacter.episode)
-
-
-        console.log("here are my result :", myCharacter.id)
-
-        console.log("here are my result Name :", myCharacter.name)
-
-        console.log("here are my result species Type :", myCharacter.species)
-
-
-        console.log("here are my result :", myCharacter.status)
-
-        console.log("here are my result :", myCharacter.url)
-
-        console.log("here are my result :", myCharacter.url)
-
-        }
-        // fetch('https://rickandmortyapi.com/api/character/?page=20')
-        // .then(response => response.json())
-        // .then(json => chooseCharacter(json))
-        // .catch(chooseCharacter);
-
-
-    //    const results= fetch('https://rickandmortyapi.com/api/character/?page=20')
-    //     .then(response => response.json())
-    //     .then(json => {const results= console.log(json)
-        
-    //     console.log("Here are my new results:",results)
-    //     })
-       
+        //fetching from my Rick and Morty Api
         fetch('https://rickandmortyapi.com/api/character/?page=20')
         .then(response => response.json())
         .then(json => {const results= json.results;
@@ -60,6 +13,8 @@
         console.log("Here are my new results:",results)
        
         console.log(results[0].image)
+
+        //Querying all the areas on my webpage that i want to make the changes
 
         const choosePic= document.querySelector('.pic')
         const choosePic2= document.querySelector('.pic2')
@@ -86,7 +41,7 @@
         const assignSpecies3=document.querySelector('.species3')
 
 
-
+  // setting the areas i am querying equal to my results value
         choosePic.src =results[2].image
         choosePic2.src =results[19].image
         choosePic3.src =results[11].image
@@ -94,7 +49,9 @@
         assignName.textContent=results[2].name
         assignName2.textContent=results[19].name
         assignName3.textContent=results[11].name
-//person 1
+
+      
+        //person 1
         assignId.textContent="ID: "+results[2].id
         assignGender.textContent="GENDER: "+results[2].gender
         assignEpisode.textContent=results[2].episode
@@ -114,7 +71,7 @@
 
 
 
-
+// there were just refrence i can see inside of the Dom
         console.log(results[1])
 
 
@@ -132,5 +89,31 @@
     
     })
        
+//Character 1
+        // function chooseCharacter({results}){
 
+        //     const [myCharacter]=results;
+
+        //   myDiv.innerHTML=myCharacter
+        // console.log("here are my result :", myCharacter)
+
+        // console.log("here are my resultImage :", myCharacter.image)
+
+        // console.log("here are my episode Link :", myCharacter.episode)
+
+
+        // console.log("here are my result :", myCharacter.id)
+
+        // console.log("here are my result Name :", myCharacter.name)
+
+        // console.log("here are my result species Type :", myCharacter.species)
+
+
+        // console.log("here are my result :", myCharacter.status)
+
+        // console.log("here are my result :", myCharacter.url)
+
+        // console.log("here are my result :", myCharacter.url)
+
+        // }
        

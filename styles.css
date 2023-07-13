@@ -90,7 +90,7 @@ img.pic3{border:2px solid plum}
 
 p.two,p.three{text-align: center;}
 
-#anime{background-image:url(https://i.gifer.com/77MS.gif);background-position: right ;}
+#anime{background-image:url(https://thumbs.gfycat.com/ShoddyWelloffCaecilian.webp);background-position: right ;}
 #anime2{background-image: url(https://media.tenor.com/waEwJu0lIpQAAAAM/rick-and-morty-dancing.gif);}
 #anime3{background-image: url(https://media.tenor.com/ijxFYrJg828AAAAM/rick-and-morty-morty-dancing.gif);}
 p.id,p.gender,p.species,p.episode{color: #d6dc2c;}
@@ -118,3 +118,111 @@ div.headerDiv{width:1000px;height: 100px;grid-row-end:4px}
 
 
 div.container2{height:400px}
+
+
+@media (max-width: 768px) {
+
+    .splash {
+
+      display: none;
+    }
+
+
+    header {
+
+      grid-template-columns: 1fr;
+
+    }
+
+    main {
+
+      grid-template-columns: 1fr;
+
+      row-gap: 50px;
+      column-gap: 0px;
+
+    }
+
+    footer {
+
+      padding: 25px;
+      text-align: center;
+
+
+    }
+
+    footer ul {
+
+      list-style: none;
+
+    }
+
+    footer h4 {
+
+      border-bottom: none;
+
+    }
+  }
+
+
+@media (max-width: 1279px) {
+
+  
+
+  main {
+
+    width: 90%;
+  }
+
+  footer {
+
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 768px) {
+
+    
+
+
+    header {
+
+      grid-template-columns: 1fr;
+
+    }
+
+    main {
+
+      grid-template-columns: 1fr;
+
+      row-gap: 50px;
+      column-gap: 0px;
+
+    }
+
+    /* footer {
+
+      padding: 25px;
+      text-align: center;
+
+
+    }
+
+    footer ul {
+
+      list-style: none;
+
+    }
+
+    footer h4 {
+
+      border-bottom: none;
+
+    } */
+}
+}
+div#character-data:hover{background-color: red;background-image: url("https://media0.giphy.com/media/Os22UiQbJk8Y6BQKpw/200w.webp?cid=ecf05e47d5xd3k2uwuu6dkavqrls0ipnf0pz58ks7aaob5o4&ep=v1_gifs_search&rid=200w.webp&ct=g");}
+
+/* a:hover {
+    box-shadow: inset 100px 0 0 0 #54b3d6;
+    color: white;
+  } */
