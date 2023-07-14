@@ -66,7 +66,7 @@
  //person 3       
         assignId3.textContent="ID: "+results[11].id
         assignGender3.textContent="GENDER: "+results[11].gender
-        assignEpisode3.textContent=results[11].episode
+        assignEpisode3.textContent=results[12].episode
         assignSpecies3.textContent="SPECIES: "+results[11].species
 
 

@@ -11,4 +11,6 @@ The Character is loaded from the Api and as well as the Data inside of the Nav.
 
 I have included youtube link to relevant episodes.
 
+site deployment url = https://shakapursuit.github.io/Front-End-Project/
+
 Enjoy
