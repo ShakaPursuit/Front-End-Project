@@ -1,15 +1,36 @@
+*{margin: 0;}
 body:hover{background-image: url("./Shaka\ Livingstone.jpeg");}
 
-body{background-color: rgb(1, 90, 255);}
+body{background-color: rgb(1, 90, 255);background-size:400px ; backface-visibility: hidden ;
+background-image: url("data:image/png;base64,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");}
+header{text-align: center;}
+img.avatar{height: 100px; width:200px}
+img.linkedin{height:50px;width:50px;}
+p{text-size-adjust:100px ;}
+a{color:black}
+a:hover{color:skyblue}
+body {
+    transition: background 0.5s ease,
+                padding 0.8s linear;
+  }
+
+  body{font-family: fantasy;}
+  p{color:red;font-size-adjust: ;}
+
 
 @media (max-width: 400px) {
 
     div.headerDiv, body,main,header {
        display: inline;
-       min-width: 402px;
+       min-width: 400px;
  
-      max-width: 402px;
+      max-width: 450px;
      }
+     img.avatar{height:100px;width:100px;}
+     img.linkedin{height: 20px;}
+     body{background-color: lightsalmon;
+    background-image:url(https://dsqqu7oxq6o1v.cloudfront.net/motion-array-1395500-nFMb8jtTGv-high.mp4);}
+     header{text-align: center;font-family: cursive;}
  
      h1{display:flexbox;max-width: 402px;}
      @media only screen 
@@ -22,3 +43,5 @@ body{background-color: rgb(1, 90, 255);}
 
 
 }
+
+h1{font-style: oblique;}
